@@ -994,9 +994,9 @@ void AuxMiningCheck()
     if (g_connman->GetNodeCount(CConnman::CONNECTIONS_ALL) == 0 && !Params().MineBlocksOnDemand())
         throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Flincoin is not connected!");
 
-    if (IsInitialBlockDownload() && !Params().MineBlocksOnDemand())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD,
-                           "Flincoin is downloading blocks...");
+    // if (IsInitialBlockDownload() && !Params().MineBlocksOnDemand())
+    //     throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD,
+    //                        "Flincoin is downloading blocks...");
 
     /* This should never fail, since the chain is already
        past the point of merge-mining start.  Check nevertheless.  */
